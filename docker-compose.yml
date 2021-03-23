@@ -1,0 +1,17 @@
+version: '3.6'
+
+volumes:
+  grafana_data: {}
+ 
+services:
+  grafana:
+    image: grafana/grafana:latest
+    user: "472"
+    ports:
+      - 3000:3000
+    volumes:
+      - ./dashboards/:/etc/dashboards/
+      - ./grafana/:/etc/grafana
+      - grafana_data:/var/lib/grafana
+
+   

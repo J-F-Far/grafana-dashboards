@@ -1,0 +1,1 @@
+alias generate-dashboards='alias generate-dashboards='docker run --rm -d -v $(pwd)/src:/code/src -v $(pwd)/dashboards:/code/dashboards --name grafana-dashboards grafana-dashboards python3 scripts/dashboards.py'
